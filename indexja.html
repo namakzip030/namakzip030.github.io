@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나막집 - 釜山豚骨スープ専門店</title>
+    <meta name="description" content="ミシュランガイド選定店 나막집。釜山の伝統的な豚骨スープを味わえる専門店です。">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8B4513">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="나막집">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#specials" class="nav-link">スペシャル</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#story" class="nav-link">ストーリー</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">メニュー</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#news" class="nav-link">ニュース</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">お問い合わせ</a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <div class="language-selector">
+                    <div class="language-dropdown">
+                        <button class="language-btn">
+                            <span class="current-lang">日</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu">
+                            <a href="index.html" class="language-option">
+                                <span class="lang-flag">한</span>
+                            </a>
+                            <a href="indexen.html" class="language-option">
+                                <span class="lang-flag">EN</span>
+                            </a>
+                            <a href="indexja.html" class="language-option active">
+                                <span class="lang-flag">日</span>
+                            </a>
+                            <a href="indexzh-Hans.html" class="language-option">
+                                <span class="lang-flag">简</span>
+                            </a>
+                            <a href="indexzh-Hant.html" class="language-option">
+                                <span class="lang-flag">繁</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">나막집</h1>
+                <p class="hero-subtitle">釜山の伝統豚骨スープ</p>
+                <p class="hero-description">ミシュランガイド選定店で<br>釜山の伝統的な味をお楽しみください</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">メニューを見る</a>
+                    <a href="#contact" class="btn btn-secondary">予約する</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-utensils"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section id="specials" class="specials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Specials</h2>
+                <p class="section-subtitle">나막집のシグネチャーメニュー</p>
+            </div>
+            <div class="specials-grid">
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/Beef_soup.png" alt="豚のコムタン" />
+                    </div>
+                    <div class="special-card">
+                        <h3>豚のコムタン</h3>
+                        <p>野菜出汁に昆布と煮干しを加えて煮出し、豚骨出汁をブレンドして作ったナマクチブシグネチャースープに、低温熟成した豚肩肉を薄く切ってのせたメニュー</p>
+                    </div>
+                </div>
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/Meat_noodle.jpeg" alt="肉きしめん" />
+                    </div>
+                    <div class="special-card">
+                        <h3>肉きしめん</h3>
+                        <p>豚骨スープにご飯の代わりに韓国の伝統的な麺であるカルグクスを使用し、低温熟成した豚の前脚肉を薄く切ってのせたメニュー</p>
+                    </div>
+                </div>
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/boiled_pork.png" alt="茹で豚" />
+                    </div>
+                    <div class="special-card">
+                        <h3>茹で豚</h3>
+                        <p>豚肉のさまざまな部位から高品質な部位を使用し、毎日新鮮な状態で茹でることを原則としたメニューです</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="img/our_story.png" alt="나막집 ストーリー" />
+                </div>
+                <div class="story-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="story-description">
+                        私たちは良い食べ物が良い人生を作ると信じています.<br><br>
+                        新鮮で良質な食材を使って正直に料理し、ひとつの料理があなたを幸せにすることを願っています。うまくできることは重要ではありません。多くの心を込めることが大切です.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Menu</h2>
+                <p class="section-subtitle">心を込めて準備したメニュー</p>
+            </div>
+            <div class="menu-categories">
+                <div class="menu-category">
+                    <h3>MAIN</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>豚のコムタン</h4>
+                                <p>90%野菜と豚骨をブランディングして作った澄んだ豚のコムタン</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>(特)豚のコムタン</h4>
+                                <p>肉の量が2倍になり、肉だけ食べてもお腹いっぱいになる澄んだ豚のコムタン</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>肉きしめん</h4>
+                                <p>生麺きしめんを入れて煮込んだ豚のコムタン</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>きしめん</h4>
+                                <p>極上の牛肉と秘伝の出汁で作った生麺カルグクス</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>ゆで肉</h4>
+                                <p>当日ゆでて柔らかくしっとりとしたゆで肉</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>サムギョプサル焼き</h4>
+                                <p>丸ごとニンニクと一緒に焼き上げたサムギョプサル</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>SIDE</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>小ゆで肉</h4>
+                                <p>当日ゆでて柔らかくしっとりとしたゆで肉</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>韓牛おにぎり</h4>
+                                <p>炒めた韓牛を入れて作ったおにぎり</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>手作り水餃子</h4>
+                                <p>機械ではなく手作りの水餃子</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>伝統酒の小酒</h4>
+                                <p>東学 1957 / 朝鮮酒造史、一杯ずつ味わう韓国の清州</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">NEWS</h2>
+                <p class="section-subtitle">나막집のニュース</p>
+            </div>
+            <div class="news-content">
+                <div class="news-card">
+                    <div class="news-badges-container">
+                        <div class="news-badge">
+                            <i class="fas fa-award"></i>
+                            <span>ミシュランガイド</span>
+                        </div>
+                        <div class="year-badge">2024</div>
+                        <div class="year-badge">2025</div>
+                    </div>
+                    <h3>ミシュランガイド選定店</h3>
+                    <p>私たちの店「나막집」がミシュランガイドに選ばれましたことをお知らせいたします. 나막집を愛し、応援してくださるすべてのお客様に心から感謝申し上げます。今後もより良い味とサービスを提供いたしますので、どうぞよろしくお願いいたします。ありがとうございます</p>
+                    <div class="news-quote">
+                        <blockquote>
+                            "釜山は豚クッパの都市らしく、クッパのスタイルも多様だ。 豚クッパ固有の味は維持しながらも、店ごとにスープの出し方を少しずつ変えている点が特徴だ。 木屋は肉の出汁で野菜の割合を高め、濃厚な味よりは軽くてさっぱりしたスープの味が楽しめる。 メインメニューの豚クッパのほか、クッパスープを使った肉カルグクスや生麺カルグクス、ゆで肉やサムギョプサル焼きなどの付帯メニューも選択できる。 モダンな感じの空間で後味がさっぱりした豚クッパを楽しむのに最適だ。"
+                        </blockquote>
+                        <cite>- ミシュランガイド</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">住所</h2>
+                <p class="section-subtitle">나막집を訪ねてください</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>1号店</h4>
+                            <p>부산 남구 분포로 145 . 스퀘어동 1층 1068호</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>2号店</h4>
+                            <p>부산 수영구 민락수변로17번길 36 . 타워더모스트 광안 101호</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>電話番号</h4>
+                            <p>0507-1383-4882</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>営業時間</h4>
+                            <p>毎日:11:30 - 20:30<br>
+                            ブレイクタイム: 15:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>地図エリア</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>나막집</h3>
+                    <p>釜山の伝統豚骨スープ</p>
+                </div>
+                <div class="footer-details">
+                    <p>事業者登録番号: 617-35-91602</p>
+                    <p>代表: 이성훈</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 나막집. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

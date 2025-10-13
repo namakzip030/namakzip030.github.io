@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나막집 - 부산 돼지곰탕 전문점</title>
+    <meta name="description" content="부산 돼지곰탕 전문점 나막집. 미쉐린 가이드 선정 맛집에서 정성스럽게 끓인 돼지곰탕을 맛보세요.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8B4513">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="나막집">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#specials" class="nav-link">스페셜</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#story" class="nav-link">스토리</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">메뉴</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#news" class="nav-link">뉴스</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">연락처</a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <div class="language-selector">
+                    <div class="language-dropdown">
+                        <button class="language-btn">
+                            <span class="current-lang">LANG</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu">
+                            <a href="index.html" class="language-option active">
+                                <span class="lang-flag">한</span>
+                            </a>
+                            <a href="indexen.html" class="language-option">
+                                <span class="lang-flag">EN</span>
+                            </a>
+                            <a href="indexja.html" class="language-option">
+                                <span class="lang-flag">日</span>
+                            </a>
+                            <a href="indexzh-Hans.html" class="language-option">
+                                <span class="lang-flag">简</span>
+                            </a>
+                            <a href="indexzh-Hant.html" class="language-option">
+                                <span class="lang-flag">繁</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">나막집</h1>
+                <p class="hero-subtitle">정성스럽게 끓인 돼지곰탕의 진미</p>
+                <p class="hero-description">미쉐린 가이드 선정 맛집에서 맛보는<br>부산의 전통 돼지곰탕</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">메뉴 보기</a>
+                    <a href="#contact" class="btn btn-secondary">예약하기</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-utensils"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section id="specials" class="specials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Specials</h2>
+                <p class="section-subtitle">나막집의 시그니처 메뉴</p>
+            </div>
+            <div class="specials-grid">
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/Beef_soup.png" alt="돼지곰탕" />
+                    </div>
+                    <div class="special-card">
+                        <h3>돼지곰탕</h3>
+                        <p>채수 기반으로 다시마 다시멸치를 첨가하여 우려낸 육수에 돈사골을 우려낸 육수를 블렌딩하여 만든 나막집 시그니처육수에 돈전지를 삶아 저온 숙성 후 얇게 올린 메뉴</p>
+                    </div>
+                </div>
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/Meat_noodle.jpeg" alt="고기칼국수" />
+                    </div>
+                    <div class="special-card">
+                        <h3>고기칼국수</h3>
+                        <p>돼지곰탕의 밥대신 한국의 전통면인 칼국수를 삶아 돈전지를 삶아 저온 숙성 후 얇게 저며 올린 메뉴</p>
+                    </div>
+                </div>
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/boiled_pork.png" alt="수육" />
+                    </div>
+                    <div class="special-card">
+                        <h3>수육</h3>
+                        <p>품질좋은 돼지의 여러부위를 매일 당일소진을 원칙으로 삶아내는 메뉴</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="img/our_story.png" alt="나막집 스토리" />
+                </div>
+                <div class="story-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="story-description">
+                        우리는 좋은 음식이 좋은 삶을 만든다고 믿는다.<br><br>
+                        신선하고 질좋은 재료로 기교를 부리지 않고. 솔직히 담아내는 한그릇이 당신을 행복하게 했으면 좋겠다. 
+                        얼마나 했느냐는 중요하지 않다. 얼마나 정성을 기울이냐가 중요하다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Menu</h2>
+                <p class="section-subtitle">정성스럽게 준비한 메뉴들</p>
+            </div>
+            <div class="menu-categories">
+                <div class="menu-category">
+                    <h3>MAIN</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>돼지곰탕</h4>
+                                <p>90%채수와 돈사골을 브랜딩하여 만든 맑은 돼지곰탕</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>(특)돼지곰탕</h4>
+                                <p>고기양이 2배로 담겨 고기만 먹어도 배부른 맑은 돼지곰탕</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>고기칼국수</h4>
+                                <p>생면 칼국수를 넣어 끓인 돼지곰탕</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>칼국수</h4>
+                                <p>비법 육수와 볶은 한우를 넣은 생면 칼국수</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>수육</h4>
+                                <p>당일 삶아 부드럽고 촉촉한 수육</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>삼겹구이</h4>
+                                <p>통마늘과 함께 구워워낸 삼겹살</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>SIDE</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>맛보기 수육</h4>
+                                <p>당일 삶아 부드럽고 촉촉한 수육</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>한우 주먹밥</h4>
+                                <p>볶은 한우를 넣어 만든 주먹밥</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>수제 물만두</h4>
+                                <p>기계가 아닌 손으로 만든 물만두</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>전통주 잔술</h4>
+                                <p>동학 1957 / 조선주조사, 한잔씩 맛보는 우리나라 청주</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">News</h2>
+                <p class="section-subtitle">나막집의 소식</p>
+            </div>
+            <div class="news-content">
+                <div class="news-card">
+                    <div class="news-badges-container">
+                        <div class="news-badge">
+                            <i class="fas fa-award"></i>
+                            <span>미쉐린 가이드</span>
+                        </div>
+                        <div class="year-badge">2024</div>
+                        <div class="year-badge">2025</div>
+                    </div>
+                    <h3>미쉐린 가이드 선정 셀렉티드 맛집</h3>
+                    <p>나막집이 미쉐린 가이드 선정 셀렉티드 맛집에 이름을 올리게 되었습니다. 나막집을 찾아주시고 사랑해 주시는 모든 고객님들께 항상 감사하는 마음으로 더 좋은 맛과 서비스를 제공하겠습니다.</p>
+                    <div class="news-quote">
+                        <blockquote>
+                            "부산은 돼지 국밥의 도시답게 국밥의 스타일도 다양하다. 돼지 국밥 고유의 맛을 유지하면서도 가게마다 국물을 내는 방식을 조금씩 달리하는 점이 특징이다. 나막집은 고기 육수에서 채수의 비율을 높여 진득한 맛보다는 가벼우면서도 깔끔한 국물 맛을 즐길 수 있다."
+                        </blockquote>
+                        <cite>- 미쉐린 가이드</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">오시는길</h2>
+                <p class="section-subtitle">나막집을 찾아주세요</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>1호점</h4>
+                            <p>부산 남구 분포로 145<br>스퀘어동 1층 1068호</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>2호점</h4>
+                            <p>부산 수영구 민락수변로17번길 36<br>타워더모스트 광안 101호</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>전화번호</h4>
+                            <p>0507-1383-4882</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>영업시간</h4>
+                            <p>매주 월요일: 휴무<br>
+                            화~일: 11:30 - 20:30<br>
+                            브레이크타임: 15:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>지도 영역</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>나막집</h3>
+                    <p>정성스럽게 끓인 돼지곰탕의 진미</p>
+                </div>
+                <div class="footer-details">
+                    <p>사업자등록번호: 617-35-91602</p>
+                    <p>대표: 이성훈</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 나막집. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

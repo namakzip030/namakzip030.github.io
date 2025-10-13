@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namakzip - Busan Pork Bone Soup Restaurant</title>
+    <meta name="description" content="Namakzip, a Michelin Guide selected restaurant in Busan specializing in traditional pork bone soup. Experience authentic Korean flavors.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8B4513">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Namakzip">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#specials" class="nav-link">Specials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#story" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#news" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <div class="language-selector">
+                    <div class="language-dropdown">
+                        <button class="language-btn">
+                            <span class="current-lang">EN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu">
+                            <a href="index.html" class="language-option">
+                                <span class="lang-flag">한</span>
+                            </a>
+                            <a href="indexen.html" class="language-option active">
+                                <span class="lang-flag">EN</span>
+                            </a>
+                            <a href="indexja.html" class="language-option">
+                                <span class="lang-flag">日</span>
+                            </a>
+                            <a href="indexzh-Hans.html" class="language-option">
+                                <span class="lang-flag">简</span>
+                            </a>
+                            <a href="indexzh-Hant.html" class="language-option">
+                                <span class="lang-flag">繁</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Namakzip</h1>
+                <p class="hero-subtitle">Authentic Busan Pork Bone Soup</p>
+                <p class="hero-description">Experience the traditional flavors of Busan<br>at our Michelin Guide selected restaurant</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">View Menu</a>
+                    <a href="#contact" class="btn btn-secondary">Make Reservation</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-utensils"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section id="specials" class="specials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Signature Menu</h2>
+                <p class="section-subtitle">Our signature dishes</p>
+            </div>
+            <div class="specials-grid">
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/Beef_soup.png" alt="Dwaeji Gomtang" />
+                    </div>
+                    <div class="special-card">
+                        <h3>Dwaeji Gomtang</h3>
+                        <p>Clear Pork Bone Soup made with Namakjip's signature broth; mixture of vegetable-based anchovy kelp stock and boiled pork leg bone (Sagol) stock, topped with thinly sliced pork butt, boiled and wet-aged at a low temperature.</p>
+                    </div>
+                </div>
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/Meat_noodle.jpeg" alt="Gogi Kalguksu" />
+                    </div>
+                    <div class="special-card">
+                        <h3>Gogi Kalguksu</h3>
+                        <p>Dwaeji Gomtang dish with Korean traditional Knife-cut noodle instead of white rice, topped with thinly sliced pork butt, boiled and wet-aged at a low temperature.</p>
+                    </div>
+                </div>
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/boiled_pork.png" alt="Suyuk" />
+                    </div>
+                    <div class="special-card">
+                        <h3>Suyuk</h3>
+                        <p>Boiled Pork made from various parts of pork, boiled and sliced, prepared and cooked daily to ensure freshness and quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="img/our_story.png" alt="Namakjip Story" />
+                </div>
+                <div class="story-text">
+                    <h2 class="section-title">Our Philosophy</h2>
+                    <p class="story-description">
+                        We believe that good food makes a better life.<br><br>
+                        We hope that serving our honest and hearty dish made of fresh and quality ingredients would make your day. No fancy tricks. Because we believe it's the effort we put in that counts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Menu</h2>
+                <p class="section-subtitle">Carefully prepared dishes</p>
+            </div>
+            <div class="menu-categories">
+                <div class="menu-category">
+                    <h3>Main Dishes</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Dwaeji Gomtang</h4>
+                                <p>Clear broth pork bone soup made with mixture of vegetable broth and pork bone stock in 9:1 ratio, giving a clear and light yet flavorful taste.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>(Large) Dwaeji Gomtang</h4>
+                                <p>Clear broth pork bone soup with double the amount of pork slices making it incredibly filling and extra hearty.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Gogi Kalguksu</h4>
+                                <p>Handmade, knife-cut wheat flour noodles boiled in Dwaeji Gomtang.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Kalguksu</h4>
+                                <p>Fresh handmade knife-cut wheat flour noodle topped with stir-fried Korean ground beef in our special vegetable broth.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Suyuk</h4>
+                                <p>Boiled Pork with tender and chewy texture, prepared fresh every morning.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Samgyeop Gui</h4>
+                                <p>Grilled Pork Belly cooked with cloves of garlic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Side Menu</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Sample Suyuk</h4>
+                                <p>Boiled Pork in smaller portion, with tender and chewy texture, prepared fresh every morning</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Hanwoo Jumeok-bap</h4>
+                                <p>Rice ball mixed with sautéed Korean beef.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Suje Mul-mandu</h4>
+                                <p>Handmade boiled dumplings sprinkled with chopped green onions.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Shot of Korean traditional liquor</h4>
+                                <p>Shot of Cheongju, Korean clear refined rice wine. Donghak 1957/ Joseonjujosa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">News</h2>
+                <p class="section-subtitle">Latest updates</p>
+            </div>
+            <div class="news-content">
+                <div class="news-card">
+                    <div class="news-badges-container">
+                        <div class="news-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Michelin Guide</span>
+                        </div>
+                        <div class="year-badge">2024</div>
+                        <div class="year-badge">2025</div>
+                    </div>
+                    <h3>Michelin Guide Selected Restaurant</h3>
+                    <p>We are delighted to announce that our restaurant has been selected by the Michelin Guide. We are very grateful to all our customers who have visited and loved our food. We will do our best to provide better flavor and service. Thank you.</p>
+                    <div class="news-quote">
+                        <blockquote>
+                            "Busan offers a wide variety of dwaeji-gukbap (pork and rice soup), befitting its position as the origin of this dish. Every restaurant adds its own twist to the soup's broth while staying true to its authentic flavors. At Namakzip, the meat broth features a higher proportion of vegetable broth, so it tastes light and clean rather than heavy. In addition to this iconic soup, the menu includes kalguksu (hand-cut noodle soup) with meat; kalguksu with fresh noodles, both featuring meat broth from dwaeji-gukbap; boiled pork slices; and grilled pork belly. For those wishing to enjoy, amidst a modern dining space, a satisfying dwaeji-gukbap with a minimal aftertaste, Namakzip is the way to go."
+                        </blockquote>
+                        <cite>- Michelin Guide</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Directions</h2>
+                <p class="section-subtitle">Visit us</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>1st Branch</h4>
+                            <p>W-Square 1st floor (#1068), 145, Bunpo-ro, Nam-gu, Busan, 48515, Republic of Korea</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>2nd Branch</h4>
+                            <p>36, Millaksubyeon-ro 17beon-gil, Suyeong-gu, Busan, 48283, Republic of Korea</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>0507-1383-4882</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Hours</h4>
+                            <p>Monday: Closed<br>
+                            Tues-Sun: 11:30 – 20:30<br>
+                            Break Time: 15:00 – 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Map Area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>나막집</h3>
+                    <p>Authentic Busan Pork Bone Soup</p>
+                </div>
+                <div class="footer-details">
+                    <p>Business License: 617-35-91602</p>
+                    <p>Owner: Seung Hoon Lee</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Namakzip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
