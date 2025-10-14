@@ -5,6 +5,27 @@
     box-sizing: border-box;
 }
 
+/* 다크 모드 강제 방지 */
+:root {
+    color-scheme: light only;
+}
+
+html {
+    color-scheme: light;
+}
+
+/* 다크 모드에서도 라이트 모드 색상 강제 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: light only;
+    }
+    
+    body {
+        background-color: #FEFCF3 !important;
+        color: #2C1810 !important;
+    }
+}
+
 :root {
     /* Color Palette - Ivory and Wood Theme */
     --ivory: #FEFCF3;

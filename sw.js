@@ -1,8 +1,13 @@
 // Service Worker for 나막집 웹사이트
-const CACHE_NAME = 'namakzip-v1.0.0';
+// 버전을 업데이트하면 새로운 캐시가 생성됩니다
+const CACHE_NAME = 'namakzip-v2.0.0';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/indexen.html',
+  '/indexja.html',
+  '/indexzh-Hans.html',
+  '/indexzh-Hant.html',
   '/styles.css',
   '/script.js',
   '/manifest.json',
@@ -10,8 +15,9 @@ const urlsToCache = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
 ];
 
-// Install event
+// Install event - 즉시 활성화
 self.addEventListener('install', (event) => {
+  self.skipWaiting(); // 즉시 활성화
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -21,22 +27,26 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event
+// Fetch event - Network First 전략 (항상 최신 버전 우선)
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request)
+    fetch(event.request)
       .then((response) => {
-        // Return cached version or fetch from network
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
+        // 네트워크에서 가져온 후 캐시 업데이트
+        const responseClone = response.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseClone);
+        });
+        return response;
+      })
+      .catch(() => {
+        // 네트워크 실패 시에만 캐시 사용
+        return caches.match(event.request);
+      })
   );
 });
 
-// Activate event
+// Activate event - 즉시 제어권 획득
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -48,6 +58,8 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
+    }).then(() => {
+      return self.clients.claim(); // 즉시 모든 클라이언트 제어
     })
   );
 });
