@@ -180,14 +180,14 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect when page loads
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        typeWriter(heroTitle, originalText, 150);
-    }
-});
+// Initialize typing effect when page loads (disabled for image logo)
+// window.addEventListener('load', () => {
+//     const heroTitle = document.querySelector('.hero-title');
+//     if (heroTitle && !heroTitle.querySelector('img')) {
+//         const originalText = heroTitle.textContent;
+//         typeWriter(heroTitle, originalText, 150);
+//     }
+// });
 
 // Counter animation for statistics (if needed)
 function animateCounter(element, target, duration = 2000) {
@@ -438,6 +438,27 @@ function detectLanguage() {
     }
 }
 
+// Language dropdown toggle functionality
+function initLanguageDropdown() {
+    const languageBtn = document.querySelector('.language-btn');
+    const languageDropdown = document.querySelector('.language-dropdown');
+    
+    if (languageBtn && languageDropdown) {
+        // Toggle dropdown on button click
+        languageBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!languageDropdown.contains(e.target)) {
+                languageDropdown.classList.remove('active');
+            }
+        });
+    }
+}
+
 // Language switching functionality
 function initLanguageSwitcher() {
     const languageOptions = document.querySelectorAll('.language-option');
@@ -464,7 +485,43 @@ function initLanguageSwitcher() {
 // Initialize language functionality
 document.addEventListener('DOMContentLoaded', () => {
     detectLanguage();
+    initLanguageDropdown();
     initLanguageSwitcher();
+});
+
+// Google Maps location switcher
+function initLocationSwitcher() {
+    const locationItems = document.querySelectorAll('.location-item');
+    const mapIframe = document.getElementById('google-map');
+    
+    // Map URLs for each location
+    const mapUrls = {
+        '1': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.048!2d129.111874!3d35.1346177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568edd6cffca979:0x5fe1cbbb1e6ac560!2z64KY66ek7KeR!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr',
+        '2': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.886!2d129.1257906!3d35.1544987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed000d2896f1:0x8945854140a96b45!2z64KY66ek7KeRIOqwkeyViOuvvOudjeygkA!5e0!3m2!1sko!2skr!4v1234567890124!5m2!1sko!2skr',
+        '3': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.988!2d129.1507362!3d35.1581642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568930014cf8fd3:0xa9dcd44c8a19884a!2z7ZiE64yA67Kg64Sk7LmY7JWE!5e0!3m2!1sko!2skr!4v1234567890125!5m2!1sko!2skr'
+    };
+    
+    locationItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const location = item.getAttribute('data-location');
+            
+            // Remove active class from all items
+            locationItems.forEach(i => i.classList.remove('active'));
+            
+            // Add active class to clicked item
+            item.classList.add('active');
+            
+            // Change map URL
+            if (mapIframe && mapUrls[location]) {
+                mapIframe.src = mapUrls[location];
+            }
+        });
+    });
+}
+
+// Initialize location switcher
+document.addEventListener('DOMContentLoaded', () => {
+    initLocationSwitcher();
 });
 
 // Console welcome message

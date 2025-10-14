@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>那幕集 - 釜山猪骨汤专门店</title>
+    <meta name="description" content="釜山猪骨汤专门店那幕集。在米其林指南选定餐厅品尝精心熬制的猪骨汤。">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8B4513">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="那幕集">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="https://www.instagram.com/namakzip/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#specials" class="nav-link">特色菜</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#story" class="nav-link">故事</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">菜单</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#news" class="nav-link">新闻</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">联系方式</a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <div class="language-selector">
+                    <div class="language-dropdown">
+                        <button class="language-btn">
+                            <span class="current-lang">LANG</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu">
+                            <a href="index.html" class="language-option">
+                                <span class="lang-flag">한</span>
+                            </a>
+                            <a href="indexen.html" class="language-option">
+                                <span class="lang-flag">EN</span>
+                            </a>
+                            <a href="indexja.html" class="language-option">
+                                <span class="lang-flag">日</span>
+                            </a>
+                            <a href="indexzh-Hans.html" class="language-option active">
+                                <span class="lang-flag">简</span>
+                            </a>
+                            <a href="indexzh-Hant.html" class="language-option">
+                                <span class="lang-flag">繁</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <img src="img/logos.png" alt="那幕集" class="hero-logo">
+                </h1>
+                <p class="hero-subtitle">釜山传统猪骨汤</p>
+                <p class="hero-description">在米其林指南选定餐厅<br>品尝釜山的传统猪骨汤</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">查看菜单</a>
+                    <a href="#contact" class="btn btn-secondary">交通信息</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <img src="img/ba.jpg" alt="那幕集美食" />
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section id="specials" class="specials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Specials</h2>
+                <p class="section-subtitle">那幕集的招牌菜</p>
+            </div>
+            <div class="specials-grid">
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/Beef_soup.png" alt="猪骨汤" />
+                    </div>
+                    <div class="special-card">
+                        <h3>猪骨汤</h3>
+                        <p>以蔬菜高汤为基底，加入海带和鱼干熬制的高汤与猪骨高汤混合而成的那幕集招牌汤底，配上煮熟后低温熟成切片的猪前腿肉</p>
+                    </div>
+                </div>
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/Meat_noodle.jpeg" alt="肉片刀削面" />
+                    </div>
+                    <div class="special-card">
+                        <h3>肉片刀削面</h3>
+                        <p>以韩国传统刀削面代替米饭的猪骨汤，配上煮熟后低温熟成切片的猪前腿肉</p>
+                    </div>
+                </div>
+                <div class="special-item">
+                    <div class="special-image">
+                        <img src="img/boiled_pork.png" alt="白切肉" />
+                    </div>
+                    <div class="special-card">
+                        <h3>白切肉</h3>
+                        <p>使用优质猪肉的多种部位，坚持每日现煮当日售完的菜品</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="img/our_story.png" alt="那幕集故事" />
+                </div>
+                <div class="story-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="story-description">
+                        我们相信好的食物创造美好的生活。<br><br>
+                        希望用新鲜优质的食材，不加修饰，真诚呈现的一碗汤能让您感到幸福。
+                        重要的不是做了多少，而是投入了多少心意。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Menu</h2>
+                <p class="section-subtitle">精心准备的菜单</p>
+            </div>
+            <div class="menu-categories">
+                <div class="menu-category">
+                    <h3>MAIN</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>猪骨汤</h4>
+                                <p>90%蔬菜高汤与猪骨混合熬制的清澈猪骨汤</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>特级猪骨汤</h4>
+                                <p>肉量加倍，光吃肉就能饱足的清澈猪骨汤</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>肉片刀削面</h4>
+                                <p>加入新鲜刀削面煮制的猪骨汤</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>刀削面</h4>
+                                <p>加入秘制高汤和炒制韩牛的新鲜刀削面</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>白切肉</h4>
+                                <p>当日煮制，柔软湿润的白切肉</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>烤五花肉</h4>
+                                <p>与整颗大蒜一起烤制的五花肉</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>SIDE</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>试吃白切肉</h4>
+                                <p>当日煮制，柔软湿润的白切肉</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>韩牛饭团</h4>
+                                <p>加入炒制韩牛制作的饭团</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>手工水饺</h4>
+                                <p>非机器制作，纯手工制作的水饺</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>传统酒小酌</h4>
+                                <p>东学1957 / 朝鲜酒造社，一杯一杯品尝的韩国清酒</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">News</h2>
+                <p class="section-subtitle">那幕集的消息</p>
+            </div>
+            <div class="news-content">
+                <div class="news-card">
+                    <div class="news-badges-container">
+                        <div class="news-badge">
+                            <i class="fas fa-award"></i>
+                            <span>米其林指南</span>
+                        </div>
+                        <div class="year-badge">2024</div>
+                        <div class="year-badge">2025</div>
+                    </div>
+                    <h3>米其林指南选定餐厅</h3>
+                    <p>那幕集连续两年入选米其林指南推荐餐厅。我们始终感谢所有光临和喜爱那幕集的顾客，将继续提供更好的美味和服务。</p>
+                    <div class="news-quote">
+                        <blockquote>
+                            "釜山不愧是猪肉汤饭的城市，汤饭的风格也很多样。在保持猪肉汤饭独特风味的同时，每家店熬制汤底的方式都略有不同是其特点。那幕集提高了肉汤中蔬菜高汤的比例，相比浓郁的口味，更能享受到清爽干净的汤头。"
+                        </blockquote>
+                        <cite>- 米其林指南</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">交通信息</h2>
+                <p class="section-subtitle">点击按钮寻找那幕集</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item location-item active" data-location="1">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>1号店</h4>
+                            <p>釜山 南区 分浦路 145<br>Square栋 1楼 1068号</p>
+                        </div>
+                    </div>
+                    <div class="contact-item location-item" data-location="2">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>2号店</h4>
+                            <p>釜山 水营区 民乐水边路17番街 36<br>Tower The Most广安 101号</p>
+                        </div>
+                    </div>
+                    <div class="contact-item location-item" data-location="3">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>3号店</h4>
+                            <p>釜山广域市 海云台区 海云台海边路 163<br>商店栋 109号（佑洞、现代Venezia公寓）</p>
+                        </div>
+                    </div>
+                    <div class="contact-item contact-phone">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>电话号码</h4>
+                            <p>0507-1383-4882</p>
+                        </div>
+                    </div>
+                    <div class="contact-item contact-hours">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>营业时间</h4>
+                            <p>每周一: 休息 (3号店)<br>
+                            周一～周日: 11:30 - 20:30 (1～2号店)<br>
+                            休息时间: 15:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe id="google-map" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.048!2d129.111874!3d35.1346177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568edd6cffca979:0x5fe1cbbb1e6ac560!2z64KY66ek7KeR!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>那幕集</h3>
+                    <p>精心熬制的猪骨汤精髓</p>
+                </div>
+                <div class="footer-details">
+                    <p>营业执照号码: 617-35-91602</p>
+                    <p>代表: 李成勋</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 那幕集. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

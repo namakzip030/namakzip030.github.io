@@ -21,6 +21,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
+            <a href="https://www.instagram.com/namakzip/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                <i class="fab fa-instagram"></i>
+            </a>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#specials" class="nav-link">스페셜</a>
@@ -77,17 +80,19 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">나막집</h1>
+                <h1 class="hero-title">
+                    <img src="img/logos.png" alt="나막집" class="hero-logo">
+                </h1>
                 <p class="hero-subtitle">정성스럽게 끓인 돼지곰탕의 진미</p>
                 <p class="hero-description">미쉐린 가이드 선정 맛집에서 맛보는<br>부산의 전통 돼지곰탕</p>
                 <div class="hero-buttons">
                     <a href="#menu" class="btn btn-primary">메뉴 보기</a>
-                    <a href="#contact" class="btn btn-secondary">예약하기</a>
+                    <a href="#contact" class="btn btn-secondary">오시는길</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="image-placeholder">
-                    <i class="fas fa-utensils"></i>
+                    <img src="img/ba.jpg" alt="나막집 음식" />
                 </div>
             </div>
         </div>
@@ -254,7 +259,7 @@
                         <div class="year-badge">2025</div>
                     </div>
                     <h3>미쉐린 가이드 선정 셀렉티드 맛집</h3>
-                    <p>나막집이 미쉐린 가이드 선정 셀렉티드 맛집에 이름을 올리게 되었습니다. 나막집을 찾아주시고 사랑해 주시는 모든 고객님들께 항상 감사하는 마음으로 더 좋은 맛과 서비스를 제공하겠습니다.</p>
+                    <p>나막집이 미쉐린 가이드 선정 셀렉티드 맛집에 2년연속 이름을 올리게 되었습니다. 나막집을 찾아주시고 사랑해 주시는 모든 고객님들께 항상 감사하는 마음으로 더 좋은 맛과 서비스를 제공하겠습니다.</p>
                     <div class="news-quote">
                         <blockquote>
                             "부산은 돼지 국밥의 도시답게 국밥의 스타일도 다양하다. 돼지 국밥 고유의 맛을 유지하면서도 가게마다 국물을 내는 방식을 조금씩 달리하는 점이 특징이다. 나막집은 고기 육수에서 채수의 비율을 높여 진득한 맛보다는 가벼우면서도 깔끔한 국물 맛을 즐길 수 있다."
@@ -271,11 +276,11 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">오시는길</h2>
-                <p class="section-subtitle">나막집을 찾아주세요</p>
+                <p class="section-subtitle">버튼을 눌러 나막집을 찾아주세요</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-item location-item active" data-location="1">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
@@ -284,7 +289,7 @@
                             <p>부산 남구 분포로 145<br>스퀘어동 1층 1068호</p>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item location-item" data-location="2">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
@@ -293,7 +298,16 @@
                             <p>부산 수영구 민락수변로17번길 36<br>타워더모스트 광안 101호</p>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item location-item" data-location="3">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>3호점</h4>
+                            <p>부산광역시 해운대구 해운대해변로 163<br>상가동 109호(우동, 현대베네시티아파트)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item contact-phone">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -302,23 +316,28 @@
                             <p>0507-1383-4882</p>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item contact-hours">
                         <div class="contact-icon">
                             <i class="fas fa-clock"></i>
                         </div>
                         <div class="contact-details">
                             <h4>영업시간</h4>
-                            <p>매주 월요일: 휴무<br>
-                            화~일: 11:30 - 20:30<br>
+                            <p>매주 월요일: 휴무 (3호점)<br>
+                            월~일: 11:30 - 20:30 (1~2호점)<br>
                             브레이크타임: 15:00 - 17:00</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-map">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map"></i>
-                        <p>지도 영역</p>
-                    </div>
+                    <iframe id="google-map" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.048!2d129.111874!3d35.1346177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568edd6cffca979:0x5fe1cbbb1e6ac560!2z64KY66ek7KeR!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>

@@ -37,12 +37,14 @@
     
     /* Spacing */
     --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 0.5rem;
+    --spacing-mg: 0.8rem;
+    --spacing-sm: 0.7rem; /*기본 1rem 모바일 변경 0.2rem*/
+    --spacing-smnav: 0.2rem; /*기본 1rem 모바일 변경 0.2rem*/
+    --spacing-md: 1.0rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
-    --spacing-3xl: 6rem;
+    --spacing-3xl: 1rem; /*기본 6rem 모바일 변경 1*/
     
     /* Border Radius */
     --radius-sm: 0.375rem;
@@ -90,8 +92,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 55px;
     position: relative;
+}
+
+/* Instagram Link */
+.instagram-link {
+    position: absolute;
+    left: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--ivory-light);
+    border: 2px solid var(--wood-light);
+    border-radius: var(--radius-lg);
+    color: var(--wood-primary);
+    font-size: var(--font-size-xl);
+    transition: var(--transition-fast);
+    box-shadow: 0 2px 8px var(--shadow-light);
+    z-index: 10;
+}
+
+.instagram-link:hover {
+    transform: translateY(-2px) scale(1.05);
+    background: var(--wood-light);
+    color: var(--white);
+    border-color: var(--wood-primary);
+    box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
 .nav-menu {
@@ -155,8 +184,9 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
+    margin-right: var(--spacing-mg);
     gap: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-smnav) var(--spacing-md);
     border-radius: var(--radius-lg);
     transition: var(--transition-fast);
     box-shadow: 0 2px 8px var(--shadow-light);
@@ -183,8 +213,15 @@ body {
     transition: var(--transition-fast);
 }
 
-.language-dropdown:hover .language-btn i {
+.language-dropdown.active .language-btn i {
     transform: rotate(180deg);
+}
+
+/* Hover effect only for devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    .language-dropdown:hover .language-btn i {
+        transform: rotate(180deg);
+    }
 }
 
 .language-menu {
@@ -202,12 +239,22 @@ body {
     transition: var(--transition-normal);
     z-index: 1000;
     overflow: hidden;
+    margin-top: 8px;
 }
 
-.language-dropdown:hover .language-menu {
+.language-dropdown.active .language-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+/* Hover effect only for devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    .language-dropdown:hover .language-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 }
 
 .language-option {
@@ -290,6 +337,7 @@ body {
     align-items: center;
     position: relative;
     z-index: 2;
+    margin-top: 50px;
 }
 
 .hero-text {
@@ -302,6 +350,13 @@ body {
     color: var(--wood-primary);
     margin-bottom: var(--spacing-sm);
     letter-spacing: -0.05em;
+}
+
+.hero-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: contain;
 }
 
 .hero-subtitle {
@@ -369,8 +424,8 @@ body {
 }
 
 .image-placeholder {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: linear-gradient(135deg, var(--wood-light) 0%, var(--wood-accent) 100%);
     border-radius: 50%;
     display: flex;
@@ -390,6 +445,14 @@ body {
     height: 200%;
     background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
     animation: shine 3s infinite;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .image-placeholder i {
@@ -428,7 +491,7 @@ body {
 
 /* Section Styles */
 section {
-    padding: var(--spacing-3xl) 0;
+    padding: 6rem 0;
 }
 
 .section-header {
@@ -558,22 +621,26 @@ section {
 }
 
 .story-image {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
     display: flex;
     justify-content: center;
     animation: fadeInRight 1s ease-out 0.3s both;
+    margin: 0 auto;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    transition: var(--transition-normal);
 }
 
 .story-image img {
     width: 100%;
     height: 100%;
-    max-height: 400px;
     object-fit: cover;
-    border-radius: var(--radius-xl);
-    box-shadow: 0 8px 25px var(--shadow-medium);
-    transition: var(--transition-normal);
 }
 
-.story-image:hover img {
+.story-image:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px var(--shadow-dark);
 }
@@ -779,6 +846,21 @@ section {
     box-shadow: 0 10px 25px var(--shadow-medium);
 }
 
+.location-item {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.location-item:hover {
+    border-color: var(--wood-light);
+}
+
+.location-item.active {
+    border-color: var(--wood-primary);
+    background: linear-gradient(to right, var(--white), var(--ivory-light));
+    box-shadow: 0 10px 25px var(--shadow-medium);
+}
+
 .contact-icon {
     width: 50px;
     height: 50px;
@@ -812,6 +894,13 @@ section {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 10px 30px var(--shadow-light);
+    height: 500px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .map-placeholder {
@@ -938,6 +1027,13 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* 모바일에서 인스타그램 버튼 크기 조정 */
+    .instagram-link {
+        width: 36px;
+        height: 36px;
+        font-size: var(--font-size-lg);
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -945,7 +1041,7 @@ section {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 57px;
         flex-direction: column;
         background-color: var(--ivory);
         width: 100%;
@@ -959,7 +1055,7 @@ section {
     .nav-right {
         position: fixed;
         right: var(--spacing-md);
-        top: 15px;
+        top: 0px;
         transform: none;
     }
     
@@ -993,6 +1089,10 @@ section {
         font-size: var(--font-size-4xl);
     }
     
+    .hero-logo {
+        max-height: 110px;
+    }
+    
     .hero-buttons {
         justify-content: center;
     }
@@ -1002,12 +1102,58 @@ section {
         text-align: center;
     }
     
+    .story-image {
+        height: 180px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    
     .menu-categories {
         grid-template-columns: 1fr;
     }
     
     .contact-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* contact-info를 투명하게 만들어 자식들을 contact-content 레벨로 */
+    .contact-info {
+        display: contents;
+    }
+    
+    /* 모바일에서 모든 contact 요소의 너비를 동일하게 */
+    .contact-item {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* 모바일 레이아웃 순서 */
+    /* 호점 위치들을 맨 위에 */
+    .location-item {
+        order: 1;
+    }
+    
+    /* 지도를 호점 아래, 전화번호 위에 배치 */
+    .contact-map {
+        order: 2;
+        height: 400px;
+        margin: var(--spacing-lg) 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* 전화번호를 지도 아래 */
+    .contact-phone {
+        order: 3;
+    }
+    
+    /* 영업시간을 맨 아래 */
+    .contact-hours {
+        order: 4;
     }
     
     .footer-content {
@@ -1032,7 +1178,7 @@ section {
     }
     
     section {
-        padding: var(--spacing-2xl) 0;
+        padding: 3rem 0;
     }
     
     /* Mobile language selector */
@@ -1042,7 +1188,7 @@ section {
     
     .language-menu {
         position: fixed;
-        top: 70px;
+        top: 49px;
         left: 0;
         right: 0;
         width: 100%;
@@ -1066,6 +1212,10 @@ section {
         font-size: var(--font-size-3xl);
     }
     
+    .hero-logo {
+        max-height: 90px;
+    }
+    
     .section-title {
         font-size: var(--font-size-3xl);
     }
@@ -1081,8 +1231,13 @@ section {
     }
     
     .image-placeholder {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
+        border-radius: 30%;
+    }
+    
+    .image-placeholder img {
+        border-radius: 30%;
     }
     
     .image-placeholder i {
@@ -1134,6 +1289,11 @@ html {
     .special-card {
         max-width: 320px;
     }
+    
+    .story-image {
+        max-width: 320px;
+        height: 220px;
+    }
 }
 
 /* Medium devices */
@@ -1154,17 +1314,19 @@ html {
     
     .story-image {
         max-width: 80%;
+        height: 260px;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
-    }
-    
-    .story-image img {
-        max-height: 300px;
     }
 }
 
 /* Extra small devices */
 @media (max-width: 480px) {
+    section {
+        padding: 2rem 0;
+    }
+    
     .specials-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
@@ -1190,12 +1352,10 @@ html {
     
     .story-image {
         max-width: 70%;
+        height: 240px;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
-    }
-    
-    .story-image img {
-        max-height: 250px;
     }
 }
 
