@@ -14,11 +14,27 @@
     <!-- Prevent Dark Mode -->
     <meta name="color-scheme" content="light only">
     
-    <link rel="stylesheet" href="styles.css?v=1.0">
+    <!-- Prevent KakaoTalk In-App Browser Cache -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <script>
+        // Dynamic timestamp to prevent CSS caching
+        document.write('<link rel="stylesheet" href="styles.css?v=' + new Date().getTime() + '">');
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="styles.css?v=1.0">
+    </noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // Force cache removal on page load
+        if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+            location.reload(true);
+        }
+    </script>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#8B4513">
     <meta name="apple-mobile-web-app-capable" content="yes">

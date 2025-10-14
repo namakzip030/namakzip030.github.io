@@ -17,12 +17,44 @@ html {
 /* 다크 모드에서도 라이트 모드 색상 강제 */
 @media (prefers-color-scheme: dark) {
     :root {
-        color-scheme: light only;
+        color-scheme: light only !important;
+    }
+    
+    html {
+        background-color: #FEFCF3 !important;
+        color: #2C1810 !important;
     }
     
     body {
         background-color: #FEFCF3 !important;
         color: #2C1810 !important;
+    }
+    
+    /* 모든 주요 섹션에 배경색 강제 */
+    .navbar {
+        background: rgba(254, 252, 243, 0.95) !important;
+        color: #2C1810 !important;
+    }
+    
+    .hero,
+    .specials,
+    .story,
+    .menu,
+    .news,
+    .contact,
+    .footer {
+        background: #FEFCF3 !important;
+        color: #2C1810 !important;
+    }
+    
+    .specials,
+    .menu,
+    .contact {
+        background: #FFFEF7 !important;
+    }
+    
+    * {
+        border-color: inherit !important;
     }
 }
 
