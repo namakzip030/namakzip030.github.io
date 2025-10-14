@@ -524,36 +524,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initLocationSwitcher();
 });
 
-// 다크 모드 강제 방지
-function forceLightMode() {
-    // HTML과 body에 라이트 모드 클래스 추가
-    document.documentElement.style.colorScheme = 'light';
-    document.body.style.colorScheme = 'light';
-    
-    // 다크 모드 관련 클래스 제거
-    document.documentElement.classList.remove('dark', 'dark-mode');
-    document.body.classList.remove('dark', 'dark-mode');
-    
-    // 다크 모드 감지 및 방지
-    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    if (darkModeMediaQuery.matches) {
-        document.documentElement.style.backgroundColor = '#FEFCF3';
-        document.body.style.backgroundColor = '#FEFCF3';
-        document.body.style.color = '#2C1810';
-    }
-}
-
-// 페이지 로드 시 즉시 실행
-forceLightMode();
-
-// DOM 로드 후에도 한 번 더 실행
-document.addEventListener('DOMContentLoaded', forceLightMode);
-
-// 다크 모드 변경 감지 시 실행
-if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', forceLightMode);
-}
-
 // Console welcome message
 console.log(`
 🍲 나막집 웹사이트에 오신 것을 환영합니다!
